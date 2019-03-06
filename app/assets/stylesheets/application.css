@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+.fruits{
+  background-color: peachpuff;
+}
+
+.counter{
+  background-color: lightskyblue;
+ }
+
+ .toggle-me{
+   background-color: palevioletred;
+ }
+
+.toggle-you{
+  background-color: green;
+}
+
+.date-input{
+  background-color: plum;
+}

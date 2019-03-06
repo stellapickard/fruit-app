@@ -1,4 +1,4 @@
-class Body extends React.Component {
+class FruitsBody extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
@@ -73,16 +73,17 @@ class Body extends React.Component {
   }
 
   componentDidMount(){
-      fetch('/api/v1/fruits.json')
-        .then((response) => {return response.json()})
-        .then((data) => {this.setState({ fruits: data }) });
-    }
-  render(){
-      return(
-        <div>
-          <NewFruit handleFormSubmit={this.handleFormSubmit}/>
-          <AllFruits fruits={this.state.fruits} handleDelete = {this.handleDelete} handleUpdate = {this.handleUpdate }/>
-        </div>
-      )
-    }
+    fetch('/api/v1/fruits.json')
+      .then((response) => {return response.json()})
+      .then((data) => {this.setState({ fruits: data }) });
   }
+  render(){
+    return(
+      <div className='fruits'>
+        <h1>Fruits are great!</h1>
+        <NewFruit handleFormSubmit={this.handleFormSubmit}/>
+        <AllFruits fruits={this.state.fruits} handleDelete = {this.handleDelete} handleUpdate = {this.handleUpdate }/>
+      </div>
+    )
+  }
+}
